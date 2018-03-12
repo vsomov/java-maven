@@ -63,16 +63,18 @@ RUN \
 #  mvn spring-boot:run && \
 
 # Add additional files
-COPY ./src/ /opt/src/
-#ADD java-maven.sh /opt/java-maven/java-maven.sh
+#COPY ./src/ /opt/src/
+#ADD ./java-maven.sh /opt/java-maven/java-maven.sh
 #cd java-maven && \
-#CMD ["bash","/root/maven/java-maven.sh"]
+CMD ["bash","/opt/java-maven/springrun.sh"]
 
 RUN chown -R 1001:0 /opt/
 USER 1001
 
 # Set the default CMD to print the usage of the language image
-CMD /opt/src/usage
+#CMD /opt/src/usage
 
 # run terminal
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
+#CMD ["java","-jar","/opt/springboot-sample-app/target/app.jar"]
+#ENTRYPOINT ["java","-jar","/opt/"]
