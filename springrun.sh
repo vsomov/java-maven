@@ -13,7 +13,7 @@ BUILD_TAG="inklander/java-maven:springboot"
 REPO="https://github.com/vsomov/java-maven.git"
 
 
-java -jar /opt/springboot-sample-app/target/app.jar &&
+java -jar /opt/springboot-sample-app/target/app.jar
 
 #git clone $REPO
 #cd java-maven

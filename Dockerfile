@@ -55,6 +55,8 @@ VOLUME /volume/git
 # Maven build
 
 RUN \
+  rm -rvf /opt/java-maven/ && \
+  rm -rvf /opt/springboot-sample-app/ && \
   git clone https://github.com/vsomov/java-maven.git && \
   git clone https://github.com/vsomov/springboot-sample-app.git && \
   cd springboot-sample-app/ && \
